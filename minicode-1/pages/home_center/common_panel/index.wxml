@@ -1,0 +1,51 @@
+<!--miniprogram/pages/home_center/common_panel/index.js.wxml-->
+<wxs src="./index.wxs" module="utils" />
+
+<image class="common-panel-backgroud" src="{{forest}}" />
+<navbar device_name="{{device_name}}" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
+
+<button class="btn-class">开启</button>
+
+<view class="dianliang">
+  <view class="one">电量统计:</view>
+  <view class="two">本次使用电量：3423423</view>
+  <view class="three">累计使用电量：6534534</view>
+</view>
+<!-- <image class="common-panel-backgroud" src="https://img1.baidu.com/it/u=1546500353,2204894501&fm=26&fmt=auto&gp=0.jpg"></image> -->
+<!-- <view class="common-panel-header">
+  <view class="common-panel-header-block">
+    <view class="common-panel-header-dpName">{{titleItem.name}}</view>
+    <view class="common-panel-header-dpValue">{{titleItem.value}}</view>
+  </view>
+</view>
+
+<block wx:if="{{isRoDpListShow}}">
+  <view class="statuslist">
+    <block wx:for="{{roDpList}}" wx:key="{{item.code}}" wx:for-item="item" wx:for-index='idx'>
+      <view class="{{utils.countDpItem(roDpListLength,idx)}}">
+        <view class="roDpItem-dpName">{{item.code}}</view>
+        <view class="roDpItem-status">{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+</block>
+
+<view class="scroll-view">
+  <block wx:if="{{isRwDpListShow}}">
+    <block wx:for="{{rwDpList}}" wx:key="{{item.code}}" wx:for-item="item">
+      <block wx:if="{{item.type === 'Boolean'}}">
+        <Boolean model:isChecked="{{item.value}}" dpCode="{{item.code}}" dpName="{{item.name}}" bind:sendDp="sendDp" />
+      </block>
+      <block wx:if="{{item.type === 'Integer'}}">
+        <Integer model:value="{{item.value}}" values="{{item.values}}" dpCode="{{item.code}}" dpName="{{item.name}}"
+          bind:sendDp="sendDp" />
+      </block>
+      <block wx:if="{{item.type === 'Enum'}}">
+        <Enum model:value="{{item.value}}" values="{{item.values}}" dpCode="{{item.code}}" dpName="{{item.name}}"
+          bind:sendDp="sendDp" />
+      </block>
+    </block>
+  </block>
+</view> -->
+<view>123</view>
+<view>123</view>
